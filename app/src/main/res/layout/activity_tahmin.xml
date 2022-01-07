@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".TahminActivity">
+
+    <TextView
+        android:id="@+id/textViewHelp"
+        android:layout_width="193dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/armata"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/numberEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRemainingRight" />
+
+    <TextView
+        android:id="@+id/textViewRemainingRight"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="84dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Remaining Guess: 5 ♥"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewHelp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numberEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Enter number..."
+        android:inputType="number|textPersonName"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lastNumberText"
+        app:layout_constraintStart_toStartOf="@+id/lastNumberText"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHelp" />
+
+    <Button
+        android:id="@+id/buttonGuess"
+        android:layout_width="169dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="130dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="casual"
+        android:text="GUESS"
+        android:textSize="24sp"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastNumberText" />
+
+    <TextView
+        android:id="@+id/lastNumberText"
+        android:layout_width="237dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:text="LAST GUESS: "
+        android:textAlignment="center"
+        android:textColor="#0E0E0E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGuess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberEditText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
